@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encrypt/Decrypt</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <script src="../JS/script.js"></script>
+</head>
+
+<body>
+  <main class="container-main">
+    <div class='container-left'>
+      <header>
+        <img class="img-logo" src="../IMG/Frame 6.svg" alt="figura letra a">
+      </header>
+
+      <form onsubmit="return false;">
+        <textarea class="input" type="text" id="texto"></textarea>
+
+        <section class="container-texto-informativo">
+          <img class="img-alert" src="../IMG/bi_exclamation-circle-fill.svg" alt="figura letra a">
+          <article>Apenas letras maiúsculas e minúsculas sem acento.</article>
+        </section>
+
+        <div class="container-button">
+          <button onclick="criptografar('criptografar', event)">Criptografar</button>
+          <button onclick="descriptografar('descriptografar', event)">Descriptografar</button>
+          <button onclick="limparTela()">Limpar</button>
+        </div>
+      </form>
+    </div>
+
+    <div class='container-right'>
+      <!-- Conteúdo inicial -->
+      <aside class="conteiner-decoracao">
+        <img class="item-decoracao" src="../IMG/High-quality-products-11.svg" alt="">
+      </aside>
+
+      <div class="container-texto">
+        <div class="text-h1">
+          <h1 class="resultado-h1">Nenhuma mensagem </h1>
+          <h1> encontrada</h1>
+        </div>
+        <h5 class="resultado-h5">Digite um texto que você deseja criptografar ou descriptografar.</h5>
+      </div>
+    </div>
+
+    <!-- Conteúdo dinâmico -->
+    <label class="resultado-label" style="display:none;">
+      <div class="resultado-componente">
+        <textarea class="resultado-texto" readonly></textarea>
+        <div class="container-button">
+          <button onclick="copiarTexto()">Copiar</button>
+        </div>
+      </div>
+    </label>
+  </main>
+</body>
+
+</html>
